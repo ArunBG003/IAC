@@ -35,4 +35,6 @@ module "eks" {
       desired_size = 1
     }
   }
+  # 👇 Force node groups to wait for the cluster to be ACTIVE
+  depends_on = [module.vpc]
 }
